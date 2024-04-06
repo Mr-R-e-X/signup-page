@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(38, 29, 48);
+  color: white;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  padding-top: 5vw;
+}
+#signup {
+  width: 75vw;
+  margin: auto;
+  font-family: "Inter", sans-serif;
+}
+.form-header {
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+.form-group-radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.float {
+  color: #3e90ee;
+  font-size: 20px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 15px;
+  top: 11px;
+  padding: 0 5px;
+  background: rgb(38, 29, 48);
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+#name,
+#email,
+#password,
+#confirm-password,
+#date {
+  font-size: 18px;
+  display: block;
+  width: 100%;
+  height: 50px;
+  padding: 0 20px;
+  background: rgb(38, 29, 48);
+  color: white;
+  border: 1px solid #3d85d8;
+  border-radius: 4px;
+  box-sizing: border-box;
+  &:focus {
+    outline: none;
+    ~ .float {
+      top: -10px;
+      font-size: 16px;
+    }
+  }
+}
+#name:not(:placeholder-shown) ~ .float {
+  top: -10px;
+  font-size: 16px;
+}
+#email:not(:placeholder-shown) ~ .float {
+  top: -10px;
+  font-size: 16px;
+}
+#password:not(:placeholder-shown) ~ .float {
+  top: -10px;
+  font-size: 16px;
+}
+#confirm-password:not(:placeholder-shown) ~ .float {
+  top: -10px;
+  font-size: 16px;
+}
+#date:not(:placeholder-shown) ~ .float {
+  top: -10px;
+  font-size: 16px;
+}
+.custom-radio {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.custom-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkmark {
+  position: absolute;
+  top: 2px;
+  left: -4px;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.custom-radio:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.custom-radio input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.custom-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+.custom-radio .checkmark:after {
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px red;
+  background: white;
+}
+input[type="checkbox"] {
+  height: 20px;
+  width: 40px;
+  cursor: pointer;
+}
+#submit {
+  /* height: 30px; */
+  font-size: 1rem;
+  width: max-content;
+  padding: 10px 40px;
+  text-align: center;
+  margin: 10px;
+  margin-top: 15px;
+  outline: none;
+  border: none;
+  background-color: #2196f3;
+  color: white;
+  font-weight: 300;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+#submit:hover {
+  border: 1px solid white;
+  border-radius: 10px;
+  font-weight: 400;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+  position: relative;
+  left: 10px;
+}
